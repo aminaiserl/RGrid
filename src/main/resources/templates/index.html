@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Research Grid</title>
+
+<!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom styles for full page slider -->
+    <link href="css/full-slider.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/new-age.min.css" rel="stylesheet">
+
+</head>
+<body id="page-top">
+
+	<!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">ResearchGrid</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">О проекте</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#signin">Войти</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#signup">Зарегистрироваться</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Slider -->
+    <header>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active" style="background-image: url('img/bg1.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Ведите работу над проектом удаленно</h2>
+              <p>Приглашайте участников проекта присоединиться.</p>
+            </div>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('img/bg2.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Исследуйте данные</h2>
+              <p>Большие объемы теперь обрабатывать проще.</p>
+            </div>
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('img/bg3.jpg')">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Делайте открытия</h3>
+              <p>Просто как никогда раньше.</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </header>
+    
+    
+
+    <section class="download bg-primary text-center" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <h2 class="section-heading" th:text="${hello}">Испытайте новую платформу для ведения совместных научных разработок</h2>
+            <p style="color: #fff;">Зарегистрируйтесь или войдите сейчас!</p>
+            <div class="badges">
+              <a class="btn btn-outline-primary btn-xl btn-xl-about" href="#" style="margin-right: 15px;">Войти</a>
+              <a class="btn btn-outline-primary btn-xl btn-xl-about" href="#">Зарегистрироваться</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    
+    <section class="features bg-light-grey" id="signin">    
+    <div class="container">
+        <div class="col-lg-8 col-lg-offset-2">
+        	<div class="section-heading text-center">
+        		<h1>Вход</h1>
+        		<hr>
+    		</div>
+            <form action="" method="post">
+               <div class="form-group">
+                    <label>E-mail:</label>
+                    <input type="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Пароль</label>
+                    <input type="password" name="password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-outline-primary btn-xl form-control btn-xl-log" value="Войти" required>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    </section>
+
+    <section class="features bg-light-grey" id="signup">
+
+    <div class="container">
+    	<div class="row">
+    		<div class="col-lg-8 col-lg-offset-2">
+        	<div class="section-heading text-center">
+    		    <h1>Регистрация</h1>
+    		    <hr>
+    		</div>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-lg-8 col-lg-offset-2">
+    			<form action="#" th:action="@{/register}" th:object="${user}" method="post">
+                <div class="form-group">
+                    <label>Имя:</label>
+                    <input type="text" name="first_name" class="form-control" th:field="*{userName}" required>
+                </div>
+                <div class="form-group">
+                    <label>Фамилия:</label>
+                    <input type="text" name="surname" class="form-control" th:field="*{userFamilyName}" required>
+                </div>
+                <div class="form-group">
+                    <label>Имя пользователя:</label>
+                    <input type="text" name="user_name" class="form-control" th:field="*{login}" required>
+                </div>
+                <div class="form-group">
+                    <label>E-mail:</label>
+                    <input type="email" name="email" class="form-control" th:field="*{email}" required>
+                </div>
+                <div class="form-group">
+                    <label>Пароль</label>
+                    <input type="password" name="password" class="form-control" th:field="*{password}" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-outline-primary btn-xl form-control btn-xl-log" value="Зарегистрироваться" required>
+                </div>
+            </form>
+    		</div>    	
+    	</div>
+      </div>
+      
+    </section>
+
+    
+    <footer>
+      <div class="container">
+        <p>&copy; ResearchGrid 2018. IITU. Development&Design by Amina Issakhanova. All Rights Reserved.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="#">Privacy</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">Terms</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">FAQ</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/new-age.min.js"></script>
+	
+
+</body>
+</html>
